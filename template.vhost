@@ -1,0 +1,18 @@
+<VirtualHost *:80>
+    ServerName [~projecturl~]
+    ServerAdmin brianwilson1001@hotmail.com
+
+    DocumentRoot /var/projects/[~projectname~]/[~projectname~]
+    <Directory /var/projects/[~projectname~]/[~projectname~]>
+        Order allow,deny
+        Allow from all
+    </Directory>
+
+    LogLevel info
+
+    WSGIScriptAlias / /var/projects/[~projectname~]/django.wsgi
+    <Directory /var/projects/[~projectname~]>
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>

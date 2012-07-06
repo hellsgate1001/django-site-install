@@ -1,0 +1,6 @@
+blog/*
+lib/*
+media/*
+template/*
+*.pyc
+
